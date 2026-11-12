@@ -32,4 +32,8 @@ Open `index.html` in any browser to view it.
 - **Social links** in the contact section.
 - **Education:** school names in the About section of `index.html`.
 
+## Scroll animations (CSS only)
+
+Built with CSS scroll-driven animations (`animation-timeline`): a reading-progress bar under the header, the hero drifting away, sections and list rows rising in one after another, project pictures settling from a slight zoom, and project cards shrinking back as the next one stacks on top. Supported in Chrome, Edge, Opera and Safari 26+; other browsers show the page without these effects. Turned off for visitors who prefer reduced motion.
+
 The contact form uses `mailto:`, so pressing *Send message* opens the visitor's email app.

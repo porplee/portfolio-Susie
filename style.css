@@ -263,11 +263,11 @@ em {
 @keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    translate: 0 28px;
   }
   to {
     opacity: 1;
-    transform: none;
+    translate: 0 0;
   }
 }
 
@@ -344,7 +344,15 @@ em {
 /* ---------- Projects: cards stack as you scroll ---------- */
 .projects {
   display: grid;
-  gap: 2.5rem;
+}
+
+.project:not(:last-of-type) {
+  margin-bottom: 2.5rem;
+}
+
+.stack-mark {
+  display: block;
+  height: 0;
 }
 
 .project {
@@ -767,12 +775,125 @@ em {
   color: var(--purple-light);
 }
 
-/* ---------- Scroll reveal (browsers that support scroll-driven animations) ---------- */
+/* ==========================================================
+   Scroll animations — pure CSS (scroll-driven animations).
+   Browsers without support simply show everything normally.
+   ========================================================== */
 @supports (animation-timeline: view()) {
+
+  /* 1. Blocks fade and rise in as they enter the screen */
   .reveal {
     animation: rise linear both;
     animation-timeline: view();
     animation-range: entry 0% entry 70%;
+  }
+
+  /* 2. Reading-progress bar along the bottom of the header */
+  .site-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--purple-dark), var(--purple-light));
+    transform-origin: left;
+    animation: grow-x linear both;
+    animation-timeline: scroll(root);
+  }
+
+  /* 3. Hero drifts away as you scroll past it */
+  .hero-text {
+    animation: drift-up linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 85vh;
+  }
+
+  .hero-photo img {
+    animation: drift-photo linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 85vh;
+  }
+
+  /* 4. Project pictures settle from a slight zoom as they come in */
+  .project img {
+    animation: settle linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 100%;
+  }
+
+  /* 5. Skill rows rise one after another as you scroll down the list */
+  .list li {
+    animation: rise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 90%;
+  }
+
+  /* 6. Cards that sit side by side arrive one after another */
+  .interest:nth-child(2) { animation-range: entry 12% entry 82%; }
+  .interest:nth-child(3) { animation-range: entry 24% entry 94%; }
+  .interest:nth-child(4) { animation-range: entry 36% cover 30%; }
+  .two-col > .reveal:nth-child(2) { animation-range: entry 15% entry 85%; }
+
+  /* 7. Each project card shrinks and dims as the next one stacks over it.
+        Progress is read from an invisible marker in normal flow just above
+        the next card (sticky elements make unreliable timelines). */
+  @media (min-width: 761px) {
+    .projects {
+      timeline-scope: --m2, --m3, --m4, --m5;
+    }
+
+    .stack-mark:nth-of-type(1) { view-timeline: --m2 block; }
+    .stack-mark:nth-of-type(2) { view-timeline: --m3 block; }
+    .stack-mark:nth-of-type(3) { view-timeline: --m4 block; }
+    .stack-mark:nth-of-type(4) { view-timeline: --m5 block; }
+
+    .project {
+      transform-origin: 50% 0;
+    }
+
+    .project:nth-of-type(-n + 4) {
+      animation: stack-back linear both;
+      animation-range: cover 30% cover 82%;
+    }
+
+    .project:nth-of-type(1) { animation-timeline: --m2; }
+    .project:nth-of-type(2) { animation-timeline: --m3; }
+    .project:nth-of-type(3) { animation-timeline: --m4; }
+    .project:nth-of-type(4) { animation-timeline: --m5; }
+  }
+}
+
+@keyframes grow-x {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes drift-up {
+  to {
+    opacity: 0.15;
+    translate: 0 -80px;
+  }
+}
+
+@keyframes drift-photo {
+  to {
+    opacity: 0.3;
+    translate: 0 60px;
+    scale: 0.9;
+    rotate: -4deg;
+  }
+}
+
+@keyframes settle {
+  from { scale: 1.18; }
+  to { scale: 1; }
+}
+
+@keyframes stack-back {
+  to {
+    scale: 0.92;
+    filter: brightness(0.75);
   }
 }
 
