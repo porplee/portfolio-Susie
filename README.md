@@ -25,10 +25,6 @@ Open `index.html` in any browser to view it.
 | Mid purple   | `#6a4f9a` | Small labels                  |
 | Dark purple  | `#33215a` | Buttons, accents, contact area |
 
-## Still to fill in
-
-- **Social links** in the contact section.
-
 ## Scroll animations (CSS only)
 
 Built with CSS scroll-driven animations (`animation-timeline`): a reading-progress bar under the header, the hero drifting away, sections and list rows rising in one after another, project pictures settling from a slight zoom, and project cards shrinking back as the next one stacks on top. Supported in Chrome, Edge, Opera and Safari 26+; other browsers show the page without these effects. Turned off for visitors who prefer reduced motion.

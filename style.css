@@ -602,21 +602,6 @@ em {
   background-size: 0 1px;
 }
 
-.socials {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-}
-
-.socials a {
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.socials a:hover {
-  color: var(--purple-light);
-}
-
 .form {
   display: grid;
   grid-template-columns: 1fr 1fr;
