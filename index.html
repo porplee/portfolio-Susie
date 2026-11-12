@@ -82,54 +82,116 @@
 
       <div class="projects">
         <article class="project" style="--i: 0">
-          <img src="images/after-dark.jpg" alt="Painted collage of four horror-game characters with glowing eyes and toothy grins." width="1600" height="1600" loading="lazy">
+          <button class="project-open" type="button" popovertarget="view-1" aria-label="View After Dark larger">
+            <img src="images/after-dark.jpg" alt="Painted collage of four horror-game characters with glowing eyes and toothy grins." width="1600" height="1600" loading="lazy">
+          </button>
           <div class="project-body">
             <p class="meta">01 · 2025 · Digital painting</p>
             <h3>After Dark</h3>
             <p>A spooky fan-art study of horror-game characters — practising textured fur, glowing eyes and the kind of light that comes from nowhere in particular.</p>
             <ul class="tags"><li>Fan art</li><li>Texture</li><li>Lighting</li></ul>
+            <button class="view-btn" type="button" popovertarget="view-1">View larger ↗</button>
           </div>
         </article>
 
         <article class="project project--lilac" style="--i: 1">
-          <img src="images/caught-off-guard.jpg" alt="Close-up painted portrait with red lips, glancing sideways beside a small speech bubble." width="1280" height="905" loading="lazy" style="object-position: 40% 50%">
+          <button class="project-open" type="button" popovertarget="view-2" aria-label="View Caught Off Guard larger">
+            <img src="images/caught-off-guard.jpg" alt="Close-up painted portrait with red lips, glancing sideways beside a small speech bubble." width="1280" height="905" loading="lazy" style="object-position: 40% 50%">
+          </button>
           <div class="project-body">
             <p class="meta">02 · 2025 · Portrait study</p>
             <h3>Caught Off Guard</h3>
             <p>A close-up about a startled glance. Soft skin tones, one glossy lip and a tiny speech bubble doing all of the talking.</p>
             <ul class="tags"><li>Portrait</li><li>Skin tones</li><li>Close-up</li></ul>
+            <button class="view-btn" type="button" popovertarget="view-2">View larger ↗</button>
           </div>
         </article>
 
         <article class="project project--purple" style="--i: 2">
-          <img src="images/shades-on.jpg" alt="Painted portrait of a person in dark sunglasses and a grey jacket, with four colour swatches." width="905" height="1280" loading="lazy" style="object-position: 50% 35%">
+          <button class="project-open" type="button" popovertarget="view-3" aria-label="View Shades On larger">
+            <img src="images/shades-on.jpg" alt="Painted portrait of a person in dark sunglasses and a grey jacket, with four colour swatches." width="905" height="1280" loading="lazy" style="object-position: 50% 35%">
+          </button>
           <div class="project-body">
             <p class="meta">03 · 2026 · Limited palette</p>
             <h3>Shades On</h3>
             <p>A portrait built from just four colours. The swatches stay in the frame so the process stays honest and visible.</p>
             <ul class="tags"><li>Colour study</li><li>Portrait</li><li>4 colours</li></ul>
+            <button class="view-btn" type="button" popovertarget="view-3">View larger ↗</button>
           </div>
         </article>
 
         <article class="project project--brown" style="--i: 3">
-          <img src="images/low-volume.jpg" alt="Painted portrait of a person in glasses and white headphones looking down, in a black jacket." width="1000" height="1426" loading="lazy" style="object-position: 65% 40%">
+          <button class="project-open" type="button" popovertarget="view-4" aria-label="View Low Volume larger">
+            <img src="images/low-volume.jpg" alt="Painted portrait of a person in glasses and white headphones looking down, in a black jacket." width="1000" height="1426" loading="lazy" style="object-position: 65% 40%">
+          </button>
           <div class="project-body">
             <p class="meta">04 · 2026 · Monochrome</p>
             <h3>Low Volume</h3>
             <p>Mostly black, almost no colour. A quiet portrait about headphones, lowered eyes and the moment the rest of the world goes mute.</p>
             <ul class="tags"><li>Portrait</li><li>Values</li><li>Mood</li></ul>
+            <button class="view-btn" type="button" popovertarget="view-4">View larger ↗</button>
           </div>
         </article>
 
         <article class="project" style="--i: 4">
-          <img src="images/small-comforts.jpg" alt="Sketch page of a black kitten, fluffy sea otters, blueberries, lilies, flowers and a candle." width="1600" height="1600" loading="lazy">
+          <button class="project-open" type="button" popovertarget="view-5" aria-label="View Small Comforts larger">
+            <img src="images/small-comforts.jpg" alt="Sketch page of a black kitten, fluffy sea otters, blueberries, lilies, flowers and a candle." width="1600" height="1600" loading="lazy">
+          </button>
           <div class="project-body">
             <p class="meta">05 · 2026 · Sketch page</p>
             <h3>Small Comforts</h3>
             <p>A page of soft things — a kitten, sea otters, blueberries, lilies and a candle. It started as a warm-up and ended up a favourite.</p>
             <ul class="tags"><li>Animals</li><li>Still life</li><li>Warm-up</li></ul>
+            <button class="view-btn" type="button" popovertarget="view-5">View larger ↗</button>
           </div>
         </article>
+      </div>
+
+      <!-- Larger views: open when a project is clicked (Esc or clicking outside closes) -->
+      <div class="viewer" id="view-1" popover>
+        <figure>
+          <img src="images/after-dark.jpg" alt="Painted collage of four horror-game characters with glowing eyes and toothy grins." width="1600" height="1600" loading="lazy">
+          <figcaption>
+            <span>01 · After Dark</span>
+            <button type="button" popovertarget="view-1" popovertargetaction="hide">Close ✕</button>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="viewer" id="view-2" popover>
+        <figure>
+          <img src="images/caught-off-guard.jpg" alt="Close-up painted portrait with red lips, glancing sideways beside a small speech bubble." width="1280" height="905" loading="lazy">
+          <figcaption>
+            <span>02 · Caught Off Guard</span>
+            <button type="button" popovertarget="view-2" popovertargetaction="hide">Close ✕</button>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="viewer" id="view-3" popover>
+        <figure>
+          <img src="images/shades-on.jpg" alt="Painted portrait of a person in dark sunglasses and a grey jacket, with four colour swatches." width="905" height="1280" loading="lazy">
+          <figcaption>
+            <span>03 · Shades On</span>
+            <button type="button" popovertarget="view-3" popovertargetaction="hide">Close ✕</button>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="viewer" id="view-4" popover>
+        <figure>
+          <img src="images/low-volume.jpg" alt="Painted portrait of a person in glasses and white headphones looking down, in a black jacket." width="1000" height="1426" loading="lazy">
+          <figcaption>
+            <span>04 · Low Volume</span>
+            <button type="button" popovertarget="view-4" popovertargetaction="hide">Close ✕</button>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="viewer" id="view-5" popover>
+        <figure>
+          <img src="images/small-comforts.jpg" alt="Sketch page of a black kitten, fluffy sea otters, blueberries, lilies, flowers and a candle." width="1600" height="1600" loading="lazy">
+          <figcaption>
+            <span>05 · Small Comforts</span>
+            <button type="button" popovertarget="view-5" popovertargetaction="hide">Close ✕</button>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
