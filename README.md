@@ -28,7 +28,6 @@ Open `index.html` in any browser to view it.
 ## Still to fill in
 
 - **Social links** in the contact section.
-- **Education:** school names in the About section of `index.html`.
 
 ## Scroll animations (CSS only)
 
