@@ -241,10 +241,10 @@ em {
   width: 100%;
   max-width: 420px;
   margin-inline: auto;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: 74% 30%; /* keeps her face centred in the arch */
-  border-radius: 999px 999px var(--radius) var(--radius);
+  object-position: 85% 30%; /* keeps her face centred in the square */
+  border-radius: var(--radius);
   outline: 1px solid var(--brown-mid);
   outline-offset: 10px;
 }
