@@ -27,7 +27,6 @@ Open `index.html` in any browser to view it.
 
 ## Still to fill in
 
-- **Photo:** replace `images/profile.svg` with a real photo (e.g. `images/profile.jpg`) and update the `src` in `index.html`.
 - **Email:** `hello@susy.example` appears in the contact section and the form's `action`.
 - **Social links** in the contact section.
 - **Education:** school names in the About section of `index.html`.
