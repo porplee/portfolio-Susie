@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Susy P Verghese — Portfolio</title>
-  <meta name="description" content="Susy P Verghese — a hardworking student and digital artist. Skills, projects and contact details.">
+  <meta name="description" content="Susy P Verghese — a hardworking student and digital artist. About me, education, skills, projects and contact details.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,14 +14,14 @@
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <a class="logo" href="index.html">Susy<span>.</span></a>
+    <a class="logo" href="#home">Susy<span>.</span></a>
     <nav aria-label="Main">
       <ul class="nav">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="index.html#skills">Skills</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -37,7 +37,7 @@
         <p class="muted">When I step away from my desk, you’ll find me drawing, catching up on movies, playing the occasional game of badminton, or out for a long walk. Take a look at what I’ve been working on below.</p>
         <div class="actions">
           <a class="btn" href="#projects">View projects</a>
-          <a class="btn btn-ghost" href="about.html">About me</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
         </div>
       </div>
       <figure class="hero-photo">
@@ -45,10 +45,81 @@
       </figure>
     </section>
 
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <p class="eyebrow">01</p>
+        <h2>About me</h2>
+      </div>
+      <div class="two-col about-intro">
+        <p class="about-statement reveal">A student who learns by <em>doing</em>.</p>
+        <div class="about-text reveal">
+          <p class="lead">I’d rather try, get it wrong and try again than wait for the perfect answer — and that habit has taught me most of what I know, from picking up a new brush to figuring out why the light in a portrait feels wrong.</p>
+          <p class="muted">Away from the desk I’m usually drawing — portraits, soft animals, the occasional monster — or catching up on movies. Badminton keeps me quick; long walks keep me thinking.</p>
+        </div>
+      </div>
+
+      <div class="about-block" id="education">
+        <h3 class="col-title reveal">Education</h3>
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="years">2024 — Now</span>
+            <div>
+              <h3>Undergraduate degree</h3>
+              <p class="muted">Your college or university</p>
+            </div>
+            <p class="muted">Currently studying. This portfolio was made for the Unit V practical assignment.</p>
+          </li>
+          <li class="reveal">
+            <span class="years">2022 — 2024</span>
+            <div>
+              <h3>Higher secondary</h3>
+              <p class="muted">Your school</p>
+            </div>
+            <p class="muted">Where problem-solving became a habit and sketchbooks started filling up.</p>
+          </li>
+          <li class="reveal">
+            <span class="years">Until 2022</span>
+            <div>
+              <h3>Secondary school</h3>
+              <p class="muted">Your school</p>
+            </div>
+            <p class="muted">First drawings in the margins of every notebook.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="about-block" id="interests">
+        <h3 class="col-title reveal">Interests &amp; hobbies</h3>
+        <ul class="interests">
+          <li class="interest reveal">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 50 L42 22 L50 30 L22 58 L12 60 Z M38 26 L46 34 M42 22 C45 17 52 16 54 22 C56 26 54 28 50 30"/></svg>
+            <h3>Drawing</h3>
+            <p>Portraits, sleepy animals and the occasional monster. Mostly digital, always in progress.</p>
+          </li>
+          <li class="interest reveal">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 26 H54 V54 H10 Z M10 26 L50 14 L53 22 L12 34 M22 22 L28 30 M34 18 L40 27 M28 36 L40 42 L28 48 Z"/></svg>
+            <h3>Movies</h3>
+            <p>Catching up on films, then pausing them to study the lighting in a single frame.</p>
+          </li>
+          <li class="interest reveal">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M26 44 C22 50 26 58 32 58 C38 58 42 50 38 44 Z M26 44 L14 10 M38 44 L50 10 M30 44 L26 8 M34 44 L38 8 M18 22 C26 19 38 19 46 22 M16 34 C26 31 38 31 48 34"/></svg>
+            <h3>Badminton</h3>
+            <p>The occasional game. Quick feet, quicker decisions and a lot of laughing.</p>
+          </li>
+          <li class="interest reveal">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 42 C14 42 12 34 14 26 C16 18 24 16 26 24 C28 32 26 42 20 42 Z M17 50 C17 46 23 46 23 50 C23 54 17 54 17 50 Z M44 30 C38 30 36 22 38 14 C40 6 48 4 50 12 C52 20 50 30 44 30 Z M41 38 C41 34 47 34 47 38 C47 42 41 42 41 38 Z"/></svg>
+            <h3>Long walks</h3>
+            <p>Where most problems quietly solve themselves — and new drawings begin.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!-- Skills -->
     <section class="section" id="skills">
       <div class="section-head reveal">
-        <p class="eyebrow">01</p>
+        <p class="eyebrow">02</p>
         <h2>Skills</h2>
       </div>
       <div class="two-col">
@@ -75,7 +146,7 @@
     <!-- Projects -->
     <section class="section" id="projects">
       <div class="section-head reveal">
-        <p class="eyebrow">02</p>
+        <p class="eyebrow">03</p>
         <h2>Projects</h2>
         <p class="muted section-intro">Personal pieces from the last two years — portraits, soft animals and the occasional monster.</p>
       </div>
@@ -198,7 +269,7 @@
     <!-- Contact -->
     <section class="section contact" id="contact">
       <div class="section-head reveal">
-        <p class="eyebrow">03</p>
+        <p class="eyebrow">04</p>
         <h2>Let’s talk</h2>
       </div>
       <div class="two-col">

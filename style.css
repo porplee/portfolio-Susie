@@ -652,6 +652,25 @@ em {
   border-bottom-color: var(--purple-light);
 }
 
+/* ---------- About ---------- */
+.about-statement {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: 1.05;
+}
+
+.about-text > * + * {
+  margin-top: 1.1rem;
+}
+
+.about-text .lead {
+  max-width: 36rem;
+}
+
+.about-block {
+  margin-top: clamp(4rem, 10vh, 6rem);
+}
+
 /* ---------- About: education ---------- */
 .timeline li {
   display: grid;
@@ -726,19 +745,6 @@ em {
 .interest p {
   font-size: 0.95rem;
   opacity: 0.8;
-}
-
-/* ---------- About: call to action ---------- */
-.cta {
-  text-align: center;
-}
-
-.cta h2 {
-  font-size: clamp(2.4rem, 6vw, 5rem);
-}
-
-.cta .actions {
-  justify-content: center;
 }
 
 /* ---------- Footer ---------- */

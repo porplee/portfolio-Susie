@@ -5,8 +5,9 @@ A minimal personal portfolio made with **HTML and CSS only** (no JavaScript), fo
 ## Structure
 
 ```
-index.html   Home (name, photo, intro, navigation) · Skills · Projects · Contact form
-about.html   About me · Education · Interests & hobbies
+index.html   One scrolling page: Home (name, photo, intro, navigation) ·
+             About me (description, education, interests & hobbies) ·
+             Skills · Projects · Contact form
 style.css    All styling — colours, fonts, layout, responsive rules, animations
 images/      Profile photo and project artwork
 ```
@@ -26,9 +27,9 @@ Open `index.html` in any browser to view it.
 
 ## Still to fill in
 
-- **Photo:** replace `images/profile.svg` with a real photo (e.g. `images/profile.jpg`) and update the `src` in both HTML files.
+- **Photo:** replace `images/profile.svg` with a real photo (e.g. `images/profile.jpg`) and update the `src` in `index.html`.
 - **Email:** `hello@susy.example` appears in the contact section and the form's `action`.
 - **Social links** in the contact section.
-- **Education:** school names in `about.html`.
+- **Education:** school names in the About section of `index.html`.
 
 The contact form uses `mailto:`, so pressing *Send message* opens the visitor's email app.
